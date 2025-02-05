@@ -16,6 +16,7 @@ pkg install -y zerotier
 service zerotier onestatus
 service zerotier onestart
 ```
+</br>
 
 3. Move the database to a persisted zfs dataset
 ```bash
@@ -24,12 +25,35 @@ mv /var/db/zerotier-one/* /mnt/tank/zerotier/db/
 /sbin/mount_nullfs /mnt/tank/zerotier/db/ /var/db/zerotier-one
 ls -1 /var/db/zerotier-one
 ```
+</br>
+
+4. Join ZeroTier network
+```bash
+zerotier-cli join 41d49af6c20ee1ce
+zerotier-cli info
+cp /usr/local/etc/rc.d/zerotier /mnt/tank/zerotier/zerotier.rc.d
+```
+</br>
+
+5. Create the startup script
+```bash
+curl https://alan.norbauer.com/articles/zerotier-on-truenas/scripts/zerotier-start.sh -o /mnt/tank/zerotier/zerotier-start.sh
+chmod +x /mnt/tank/zerotier/zerotier-start.sh
+```
+</br>
+
+6. Add zerotier-start.sh to TrueNAS as a Pre-Init startup script
+
+
+# Perintah Lain
 
 ```bash
+curl -s https://install.zerotier.com | bash
+zerotier-cli join "network_id"
+systemctl enable zerotier-one.service
+systemctl restart zerotier-one.service
 ```
 
-```bash
-```
 
 
 ## Donate Qris ALL Payment
