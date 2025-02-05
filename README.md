@@ -25,4 +25,4 @@ pkg install -y zerotier
 
 ## Donate Qris ALL Payment
 <p align="center">
-<img src="https://github.com/arthasa28/Cyberior_MD-BOT/blob/master/pp%20Qris%20Artha.jpg?raw=true" alt="CYBERIR-MD" width="350"/>
+<img src="https://github.com/arthasa28/Cyberior_MD-BOT/blob/master/pp%20Qris%20Artha.jpg?raw=true" alt="CYBERIR-MD" width="250"/>
