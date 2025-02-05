@@ -9,6 +9,7 @@ sed -i .orig 's/enabled: no/enabled: yes/' /usr/local/etc/pkg/repos/FreeBSD.conf
 pkg update
 pkg install -y zerotier
 ```
+</br>
 
 2. Start the service
 ```bash
